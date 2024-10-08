@@ -19,7 +19,17 @@ CREATE TABLE disciplina(
   cpf_professor INTEGER
 );
 CREATE TABLE encaminhamento(
-  id INTEGER PRIM
+  id INTEGER PRIMARY KEy AUTOINCREMENT,
+  nome_aluno TEXT,
+  nome_professor VARCHAR(150),
+  disciplina TEXT,
+  serie VARCHAR(30),
+  data_encaminhamento DATE,
+  horario TEXT,
+  FOREIGN KEy ('nome_aluno') REFERENCES aluno('nome'),
+  FOREIGN KEY ('nome_professor') REFERENCES disciplina('nome_professor'),
+  FOREIGN key ('disciplina') REFERENCES disciplina('nome_disciplina'),
+  FOREIGN key ('serie') REFERENCES aluno('serie')
 );
 CREATE TABLE responsavel(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
