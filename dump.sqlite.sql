@@ -10,7 +10,6 @@ CREATE TABLE aluno(
   telefone_responsavel INTEGER,
   data_nascimento DATE
 );
-CREATE TABLE demo (ID integer primary key, Name varchar(20), Hint text );
 CREATE TABLE disciplina(
   id INTEGER PRIMARY key AUTOINCREMENT,
   nome TEXT NOT NULL,
@@ -30,6 +29,28 @@ CREATE TABLE encaminhamento(
   FOREIGN KEY ('nome_professor') REFERENCES disciplina('nome_professor'),
   FOREIGN key ('disciplina') REFERENCES disciplina('nome_disciplina'),
   FOREIGN key ('serie') REFERENCES aluno('serie')
+);
+CREATE TABLE funcionario(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  nome TEXT NOT NULL,
+  cpf INTEGER,
+  telefone INTEGER,
+  setor TEXT NOT NULL,
+  admissao TEXT
+);
+CREATE TABLE ocorrencia(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  nome_aluno VARCHAR(150) NOT NULL,
+  nome_funcionario VARCHAR(150) NOT NULL,
+  disciplina TEXT,
+  serie VARCHAR(20),
+  data_ocorencia DATE,
+  horario TIME,
+  descricao TEXT,
+  FOREIGN KEy ('nome_aluno')REFERENCES aluno('nome'),
+  FOREIGN KEy ('nome_funcionario')REFERENCES funcionario('nome'),
+  FOREIGN KEy ('disciplina')REFERENCES disciplina('nome'),
+  FOREIGN KEy ('serie')REFERENCES aluno('serie')
 );
 CREATE TABLE responsavel(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
