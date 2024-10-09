@@ -25,6 +25,8 @@ CREATE TABLE encaminhamento(
   serie VARCHAR(30),
   data_encaminhamento DATE,
   horario TEXT,
+  pedagogico VARCHAR(200),
+  monitor VARCHAR(200),
   FOREIGN KEy ('nome_aluno') REFERENCES aluno('nome'),
   FOREIGN KEY ('nome_professor') REFERENCES disciplina('nome_professor'),
   FOREIGN key ('disciplina') REFERENCES disciplina('nome_disciplina'),
