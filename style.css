@@ -24,6 +24,12 @@ header nav {
     padding: 10px 20px;
 }
 
+/* Links dos formulários dos formulários */
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
 /* Tamanho do título */
 header h1 {
     margin-left: 20px;
