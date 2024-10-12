@@ -95,6 +95,18 @@ body {
     width: 100%;
 }
 
+/* Opções das ocorrências */
+select {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 6px;
+    border: solid 1px #ddd;
+    font-size: 1rem;
+    margin-top: 8px;
+    outline: none;
+    padding: 10px;
+}
+
 /* Cor e modificação do botão de cadastrar */
 button {
     background-color: #007bff;

@@ -84,24 +84,61 @@
 
                     <!-- Divisão -->
                     <div class="input-group">
-                        <!-- Horário da Ocorrência -->
-                        <label>Ocorrência Pedagógica</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="pedagogico" value="nao-realiza-tarefas" required>Não realiza as tarefas.</label>
-                            <label><input type="radio" name="pedagogico" value="nao-traz-material" required>Não traz o material necessário para as aulas.</label>
-                            <label><input type="radio" name="pedagogico" value="faltas-avaliacoes" required>Falta em avaliações.</label>
-                            <label><input type="radio" name="pedagogico" value="nao-entrega-trabalhos" required>Não entrega trabalhos escolares.</label>
-                            <label><input type="radio" name="pedagogico" value="desinteresse" required>Desinteresse e apatia durante as aulas.</label>
-                        </div>
+                        <!-- Ocorrências Pedagógicas -->
+                        <label for="ocorrencia-pedagogica">Ocorrência Pedagógica</label>
+                        <!-- Opções -->
+                        <select name="ocorrencia-pedagogica" id="ocorrencia-pedagogica" required>
+                            <option value="nao-realiza-tarefa">Não realiza as tarefas.</option>
+                            <option value="nao-traz-material">Não traz material necessário para as aulas.</option>
+                            <option value="falta-em-avaliacoes">Falta em avaliações.</option>
+                            <option value="nao-entrega-trabalho">Não entrega trabalhos escolares.</option>
+                            <option value="desinteresse-nas-aulas">Desinteresse a apatia durante as aulas.</option>
+                        </select>
+                    </div>
+
+                    <!-- Divisão -->
+                    <div class="input-group">
+                        <!-- Ocorrências Pedagógicas -->
+                        <label for="ocorrencia-pedagogica">Ocorrência Monitores</label>
+                        <!-- Opções -->
+                        <select name="ocorrencia-monitores" id="ocorrencia-monitores" required>
+                            <option value="conversa-excessiva">Conversa excessiva durante as aulas.</option>
+                            <option value="desrespeito-ao-professor">Desrespeito ao professor.</option>
+                            <option value="briga-com-colegas">Briga com os colegas.</option>
+                            <option value="dano-ao-patrimonio">Dano ao patrimônio.</option>
+                            <option value="dormir-na-sala">Permanecer na sala em estado de sonolência.</option>
+                        </select>
                     </div>
 
                     <!-- Divisão -->
                     <div class="input-group">
                         <!-- Descrição da Ocorrência -->
-                        <label for="descricao-ocorrencia">Descrição da Ocorrência</label>
+                        <label for="outro">Outro</label>
                         <!-- Onde os dados serão inseridos -->
-                        <textarea name="descricao-ocorrencia" id="descricao-ocorrencia" rows="10" cols="46"
-                            placeholder="Ex: Agrediu o professor." required></textarea>
+                        <textarea name="outro" id="outro" rows="10" cols="46"
+                            placeholder="Ex: Ocorrência que não está nas opções acima." required></textarea>
+                    </div>
+
+                    <!-- Divisão -->
+                    <div class="input-group">
+                        <!-- Chamada -->
+                        <label for="chamada">Quantas vezes o aluno foi chamado a atenção antes do
+                            encaminhamento?</label>
+                        <!-- Opções -->
+                        <select name="chamada" id="chamada" required>
+                            <option value="uma-vez">1 vez.</option>
+                            <option value="duas-vezes">2 vezes.</option>
+                            <option value="tres-ou-mais">3 vezes ou mais.</option>
+                        </select>
+                    </div>
+
+                    <!-- Divisão -->
+                    <div class="input-group">
+                        <!-- Punição do aluno -->
+                        <label for="punicao">Atividade que o aluno deverá realizar fora da sala de aula.</label>
+                        <!-- Onde os dados serão inseridos -->
+                        <textarea name="punicao" id="punicao" rows="10" cols="46"
+                            placeholder="Ex: Escrever o hino nacional 100 vezes." required></textarea>
                     </div>
 
                     <!-- Quebra linha -->
@@ -117,7 +154,7 @@
     <!-- Rodapé -->
     <footer>
         <!-- Direitos autorais -->
-        <p>&copy; 2024 Formulário de Cadastro de Ocorrência | Todos os direitos reservados</p>
+        <p>&copy; 2024 Formulário de Cadastro de Encaminhamento | Todos os direitos reservados</p>
     </footer>
 
     <!-- JavaScript sendo chamado -->

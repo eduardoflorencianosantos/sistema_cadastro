@@ -9,6 +9,5 @@ function encaminhamento() {
     let ocorrencia_pedagogica = document.getElementById('ocorrencia-pedagogica').value;
     let ocorrencia_monitores = document.getElementById('ocorrencia-monitores').value;
     let outro = document.getElementById('outro').value;
-    let quantidade_chamadas = document.getElementById('quantidade-chamadas').value;
     let punicao = document.getElementById('punicao').value;
 }
