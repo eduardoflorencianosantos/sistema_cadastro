@@ -231,6 +231,10 @@ footer {
         height: calc(100vh - 100px);
     }
 
+    .header-principal ul li a{
+        text-decoration: underline;
+    }
+
     /*Colocamos o elemnto como se fosse um bloco junto com uma largura definida e um texto alinhado no centro*/
     header .menu {
         display: block;
@@ -251,7 +255,8 @@ footer {
 @media (max-width: 768px) {
 
     .header-principal ul li a{
-        font-size: 12px;
+        font-size: 75%;
+        text-decoration: underline;
     }
 
     /* Área de navegação do cabeçalho */
@@ -300,8 +305,13 @@ footer {
 /* Responsividade para tablets e celulares */
 @media (max-width: 768px) {
 
+    .header-principal ul {
+        width: 50%;
+        text-align: center;
+    }
+
     .header-principal ul li a{
-        font-size: 50%;
+        font-size: 75%;
     }
 
 }
@@ -311,10 +321,12 @@ footer {
 
     .header-principal ul {
         width: 50%;
+        text-align: center;
     }
 
     .header-principal ul li a{
-        font-size: 50%;
+        font-size: 70%;
+        text-decoration: underline;
     }
 
     /* Título do cabeçalho */
