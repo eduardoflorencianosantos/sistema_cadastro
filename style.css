@@ -9,37 +9,102 @@
     padding: 0;
 }
 
-/* Modificações do cabeçalho */
-header {
-    background-color: #343a40;
-    color: #fff;
-    padding: 10px 0;
-}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/* Posicionameto flexbox dos elementos do cabeçalho */
-header nav {
-    align-items: center;
+/*Aqui começa o Header*/
+
+/*Colocamos o grid no header da pagina principal junto com uma cor de fundo, tambem adicionamos uma altura parea o header e colocamos os elementos separados*/
+.header-principal {
+    grid-area: cabe;
+    width: auto;
     display: flex;
-    justify-content: flex-start;
-    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background-color: #343a40;
 }
 
-/* Links dos formulários dos formulários */
-header nav a {
+/*Colocamos isso para o elemento não aparecer no site */
+#chk1 {
+    display: none;
+}
+
+/*Colocamos uma cor nos icones e um cursor pointer para quando ficar em cima aparecer uma mão para clicar*/
+i {
     color: #fff;
-    text-decoration: none;
-}
-
-/* Tamanho do título */
-header h1 {
-    margin-left: 20px;
-    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* Modificação de tamanho da logo */
 .logo {
     height: 50px;
     width: auto;
+}
+
+.modifica{
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+}
+
+/* Tamanho do título */
+header h1 {
+    flex: 1;
+    color: #fff;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/*Colocamos uma distancia do elemento em relasção ao topo junto com um espaçamento dos elementos e deixamos o elemento flexivel*/
+.header-principal ul {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+
+/*Colocamos iso para nao aparecer a bolinha do Ul*/
+.header-principal ul li {
+    list-style: none;
+}
+
+/*Colocamos uma cor nas palavras junto com um tamanho de letra definida também tiramos o sublinafo que tem nos links com uma distancia da esquerda e direita e cima baixo */
+.header-principal ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding-block: 5px;
+    transition: all 1s ease;
+    padding: 10px 15px;
+}
+
+/*Colocamos uma cor nas palavras*/
+.header-principal ul li a:hover {
+    color: #fff;
+}
+
+/*Colocamos o elemento como se fosse um bloco junto com uma cor de fundo também arrendondamos as bordas junto com uma transição*/
+.header-principal ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    border-radius: 200px;
+    background: #fff;
+    transition: all 1s ease;
+}
+
+/*Colocamos uma largura no elemento*/
+.header-principal ul li a:hover::after {
+    width: 80%;
+}
+
+/*Colocamos um tamanho de letra definida junto com um display none que faz com que o elemento desapareça do site*/
+header .menu {
+    font-size: 2.5em;
+    display: none;
 }
 
 /* Cor de fundo */
@@ -145,8 +210,49 @@ footer {
     text-align: center;
 }
 
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Media scren*/
+
+/*Media scren (1330 pixels)*/
+@media only screen and (max-width: 1330px) {
+
+    /*Colocamos o elemento em uma posição fixa com uma distancia do topo, também adicionamos uma cor de fundo, adicionamo uma largura e altura para o elemento junto com uma transição*/
+    .header-principal ul {
+        position: fixed;
+        top: 102px;
+        margin-top: 0;
+        right: -100%;
+        background: rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+        width: 40%;
+        height: calc(100vh - 100px);
+    }
+
+    /*Colocamos o elemnto como se fosse um bloco junto com uma largura definida e um texto alinhado no centro*/
+    header .menu {
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+
+    /*Colocamos o elemento para ficar 0% para a direita*/
+    #chk1:checked~ul {
+        right: 0;
+        font-size: 20px;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
 /* Responsividade para tablets e celulares */
 @media (max-width: 768px) {
+
+    .header-principal ul li a{
+        font-size: 12px;
+    }
 
     /* Área de navegação do cabeçalho */
     header nav {
@@ -191,8 +297,25 @@ footer {
     }
 }
 
+/* Responsividade para tablets e celulares */
+@media (max-width: 768px) {
+
+    .header-principal ul li a{
+        font-size: 50%;
+    }
+
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 480px) {
+
+    .header-principal ul {
+        width: 50%;
+    }
+
+    .header-principal ul li a{
+        font-size: 50%;
+    }
 
     /* Título do cabeçalho */
     header h1 {

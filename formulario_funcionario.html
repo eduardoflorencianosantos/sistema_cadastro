@@ -7,27 +7,54 @@
     <title>Cadastro Funcionário | C.C.M Tarquínio Santos</title>
     <!-- CSS sendo chamado -->
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <!--Identifica os icons atráves de codigo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <!-- Cabeçalho -->
-    <header>
+    <!--Aqui começa o header-->
+    <header style=" position: fixed; width: 100%;" class="header-principal">
+        <!--Aqui tem um input para colocar o menu-->
+        <input type="checkbox" name="" id="chk1">
         <!-- Área de navegação do cabeçalho -->
-        <nav>
+        <nav class="modifica">
             <figure>
                 <!-- Logo do C.C.M -->
                 <img src="imagem/logo.png" alt="Logo do C.C.M" class="logo">
             </figure>
             <!-- Título -->
-            <h1>Cadastro de Funcionário</h1>
-            <!-- Links dos outros formulários -->
-            <a href="formulario_aluno.html" target="_blank">Cadastro de Aluno</a>
-            <a href="formulario_disciplina.html" target="_blank">Cadastro de Disciplina</a>
-            <a href="formulario_encaminhamento.html" target="_blank">Cadastro de Encaminhamento</a>
-            <a href="formulario_ocorrencia.html" target="_blank">Cadastro de Ocorrência</a>
-            <a href="formulario_responsavel.html" target="_blank">Cadastro de Responsável</a>
+            <h1>Cadastro de Encaminhamento</h1>
         </nav>
-    </header>
+        <!--Aqui começa a lista do header-->
+        <ul>
+            <!--Aqui são os links das outras paginas-->
+            <li> <a href="formulario_responsavel.html" target="_blank">Cadastro de Responsável</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="formulario_aluno.html" target="_blank">Cadastro de Aluno</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="formulario_disciplina.html" target="_blank">Cadastro de Disciplina</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="formulario_encaminhamento.html" target="_blank">Cadastro de Encaminhamento</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="formulario_ocorrencia.html" target="_blank">Cadastro de Ocorrência</a></li>
+        </ul>
+        <!--Aqui termina a lista do header-->
+
+        <!--Aqui vai ter o icone do menu-->
+        <div class="menu">
+            <!--Aqui está o icone do menu-->
+            <label for="chk1">
+                <!--Esse e o icone do menuzinho-->
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+    </header> <br> <br> <br>
+    <!--Fim do Header-->
+
 
     <!-- Parte principal -->
     <main>
