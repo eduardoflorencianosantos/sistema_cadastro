@@ -24,10 +24,10 @@
         <nav class="modifica">
             <figure>
                 <!-- Logo do C.C.M -->
-                <img src="imagem/logo.png" alt="Logo do C.C.M" class="logo">
+                <a href="index.html"><img src="imagem/logo.png" alt="Logo do C.C.M" class="logo" title="Voltar"></a>
             </figure>
             <!-- Título -->
-            <h1>Cadastro de Encaminhamento</h1>
+            <h1>Cadastro do Responsável</h1>
         </nav>
         <!--Aqui começa a lista do header-->
         <ul>
@@ -55,8 +55,8 @@
     </header> <br> <br> <br>
     <!--Fim do Header-->
 
-    <!-- Parte principal -->
-    <main>
+     <!-- Parte principal -->
+     <main>
         <!-- Seção do formulário -->
         <section class="form-section">
             <div class="form-container">
@@ -73,40 +73,44 @@
                             placeholder="Ex: Ivonei dos Santos" required>
                     </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- CPF do responsável -->
-                        <label for="cpf">CPF</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="text" id="cpf" name="cpf" placeholder="Ex: 14487998653" required>
+                    <div class="coluninha">
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- CPF do responsável -->
+                            <label for="cpf">CPF Responsável</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="text" id="cpf" name="cpf" placeholder="Ex: 14487998653" required>
+                        </div>
+
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Telefone do responsável -->
+                            <label for="telefone-responsavel">Telefone Responsável</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="tel" id="telefone-responsavel" name="telefone-responsavel"
+                                placeholder="Ex: 45998998088" required>
+                        </div>
                     </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Nome completo do filho do responsável -->
-                        <label for="nome-filho">Nome Completo Filho</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="text" id="nome-filho" name="nome-filho"
-                            placeholder="Ex: Eduardo Florenciano dos Santos" required>
-                    </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- CPF do filho do responsável -->
-                        <label for="cpf-filho">CPF Filho</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="text" id="cpf-filho" name="cpf-filho" placeholder="Ex: 13576790879" required>
-                    </div>
+                    <div class="coluninha">
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Nome completo do filho do responsável -->
+                            <label for="nome-filho">Nome Completo Filho</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="text" id="nome-filho" name="nome-filho"
+                                placeholder="Ex: Eduardo Florenciano dos Santos" required>
+                        </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Telefone do responsável -->
-                        <label for="telefone-responsavel">Telefone Responsável</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="tel" id="telefone-responsavel" name="telefone-responsavel"
-                            placeholder="Ex: 45998998088" required>
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- CPF do filho do responsável -->
+                            <label for="cpf-filho">CPF do Filho</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="text" id="cpf-filho" name="cpf-filho" placeholder="Ex: 13576790879" required>
+                        </div>
                     </div>
-
                     <!-- Quebra linha -->
                     <br>
 

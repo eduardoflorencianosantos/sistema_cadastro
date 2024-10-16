@@ -24,10 +24,10 @@
         <nav class="modifica">
             <figure>
                 <!-- Logo do C.C.M -->
-                <img src="imagem/logo.png" alt="Logo do C.C.M" class="logo">
+                <a href="index.html"><img src="imagem/logo.png" alt="Logo do C.C.M" class="logo" title="Voltar"></a>
             </figure>
             <!-- Título -->
-            <h1>Cadastro de Encaminhamento</h1>
+            <h1>Cadastro do Funcionário</h1>
         </nav>
         <!--Aqui começa a lista do header-->
         <ul>
@@ -56,8 +56,8 @@
     <!--Fim do Header-->
 
 
-    <!-- Parte principal -->
-    <main>
+     <!-- Parte principal -->
+     <main>
         <!-- Seção do formulário -->
         <section class="form-section">
             <div class="form-container">
@@ -74,38 +74,40 @@
                             placeholder="Ex: Wagner Jorcuvich Nunes da Silva" required>
                     </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- CPF do funcionário -->
-                        <label for="cpf">CPF</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="text" id="cpf" name="cpf" placeholder="Ex: 14487998653" required>
-                    </div>
+                    <div class="coluninha">
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- CPF do funcionário -->
+                            <label for="cpf">CPF</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="text" id="cpf" name="cpf" placeholder="Ex: 14487998653" required>
+                        </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Telefone do funcionário -->
-                        <label for="telefone">Telefone</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="tel" id="telefone" name="telefone" placeholder="Ex: 45999986023" required>
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Telefone do funcionário -->
+                            <label for="telefone">Telefone</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="tel" id="telefone" name="telefone" placeholder="Ex: 45999986023" required>
+                        </div>
                     </div>
+                    <div class="coluninha">
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Setor do funcionário -->
+                            <label for="setor">Setor</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="text" id="setor" name="setor" placeholder="Ex: Educação" required>
+                        </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Setor do funcionário -->
-                        <label for="setor">Setor</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="text" id="setor" name="setor" placeholder="Ex: Educação" required>
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Cargo do funcionário -->
+                            <label for="cargo">Cargo</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="text" id="cargo" name="cargo" placeholder="Ex: Professor" required>
+                        </div>
                     </div>
-
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Cargo do funcionário -->
-                        <label for="cargo">Cargo</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="text" id="cargo" name="cargo" placeholder="Ex: Professor" required>
-                    </div>
-
                     <!-- Divisão -->
                     <div class="input-group">
                         <!-- Que dia o funcionário foi contratado -->

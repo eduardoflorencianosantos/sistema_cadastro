@@ -24,10 +24,10 @@
         <nav class="modifica">
             <figure>
                 <!-- Logo do C.C.M -->
-                <img src="imagem/logo.png" alt="Logo do C.C.M" class="logo">
+                <a href="index.html"><img src="imagem/logo.png" alt="Logo do C.C.M" class="logo" title="Voltar"></a>
             </figure>
             <!-- Título -->
-            <h1>Cadastro de Encaminhamento</h1>
+            <h1>Cadastro da Disciplina</h1>
         </nav>
         <!--Aqui começa a lista do header-->
         <ul>
@@ -38,7 +38,7 @@
             <!--Aqui são os links das outras paginas-->
             <li><a href="formulario_aluno.html" target="_blank">Cadastro de Aluno</a></li>
             <!--Aqui são os links das outras paginas-->
-            <li><a href="formulario_encaminhamento.html" target="_blank">Cadastro de encaminhamento</a></li>
+            <li><a href="formulario_encaminhamento.html" target="_blank">Cadastro de Encaminhamento</a></li>
             <!--Aqui são os links das outras paginas-->
             <li><a href="formulario_ocorrencia.html" target="_blank">Cadastro de Ocorrência</a></li>
         </ul>
@@ -73,15 +73,25 @@
                             required>
                     </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Nome do professor da disciplina -->
-                        <label for="professor-disciplina">Professor Responsável</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="text" id="professor-disciplina" name="professor-disciplina"
-                            placeholder="Ex: Wagner Jorcuvich Nunes da Silva" required>
-                    </div>
 
+                    <div class="coluninha">
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Nome do professor da disciplina -->
+                            <label for="professor-disciplina">Professor Responsável</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="text" id="professor-disciplina" name="professor-disciplina"
+                                placeholder="Ex: Wagner Jorcuvich Nunes da Silva" required>
+                        </div>
+
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- CPF do funcionário -->
+                            <label for="cpf">CPF do Professor</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="text" id="cpf" name="cpf" placeholder="Ex: 14487998653" required>
+                        </div>
+                    </div>
                     <!-- Divisão -->
                     <div class="input-group">
                         <!-- Série/Turma da Disciplina -->

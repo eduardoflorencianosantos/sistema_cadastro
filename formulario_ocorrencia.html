@@ -24,10 +24,10 @@
         <nav class="modifica">
             <figure>
                 <!-- Logo do C.C.M -->
-                <img src="imagem/logo.png" alt="Logo do C.C.M" class="logo">
+                <a href="index.html"><img src="imagem/logo.png" alt="Logo do C.C.M" class="logo" title="Voltar"></a>
             </figure>
             <!-- Título -->
-            <h1>Cadastro de Encaminhamento</h1>
+            <h1>Cadastro de Ocorrência</h1>
         </nav>
         <!--Aqui começa a lista do header-->
         <ul>
@@ -82,38 +82,41 @@
                             placeholder="Ex: Wagner Jorcuvich Nunes da Silva" required>
                     </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Disciplina -->
-                        <label for="disciplina">Disciplina</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="text" id="disciplina" name="disciplina" placeholder="Ex: Back-End" required>
+                    <div class="coluninha">
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Disciplina -->
+                            <label for="disciplina">Disciplina</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="text" id="disciplina" name="disciplina" placeholder="Ex: Back-End" required>
+                        </div>
+
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Série/Turma -->
+                            <label for="turma">Série/Turma</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="text" id="turma" name="turma" placeholder="Ex: 3D" required>
+                        </div>
                     </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Série/Turma -->
-                        <label for="turma">Série/Turma</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="text" id="turma" name="turma" placeholder="Ex: 3D" required>
-                    </div>
+                    <div class="coluninha">
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Data da Ocorrência -->
+                            <label for="data-ocorrencia">Data da Ocorrência</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="date" id="data-ocorrencia" name="data-ocorrencia" required>
+                        </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Data da Ocorrência -->
-                        <label for="data-ocorrencia">Data da Ocorrência</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="date" id="data-ocorrencia" name="data-ocorrencia" required>
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Horário da Ocorrência -->
+                            <label for="horario-ocorrencia">Horário da Ocorrência</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="time" id="horario-ocorrencia" name="horario-ocorrencia" required>
+                        </div>
                     </div>
-
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Horário da Ocorrência -->
-                        <label for="horario-ocorrencia">Horário da Ocorrência</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="time" id="horario-ocorrencia" name="horario-ocorrencia" required>
-                    </div>
-
                     <!-- Divisão -->
                     <div class="input-group">
                         <!-- Descrição da Ocorrência -->

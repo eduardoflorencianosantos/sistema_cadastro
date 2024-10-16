@@ -25,7 +25,7 @@
         <nav class="modifica">
             <figure>
                 <!-- Logo do C.C.M -->
-                <img src="imagem/logo.png" alt="Logo do C.C.M" class="logo">
+                <a href="index.html"><img src="imagem/logo.png" alt="Logo do C.C.M" class="logo" title="Voltar"></a>
             </figure>
             <!-- Título -->
             <h1>Cadastro de Encaminhamento</h1>
@@ -57,7 +57,7 @@
     <!--Fim do Header-->
 
     <!-- Parte principal -->
-    <main> <link rel="shortcut icon" href="imagens/logo.png">
+    <main>
         <!-- Seção do formulário -->
         <section class="form-section">
             <div class="form-container">
@@ -83,66 +83,71 @@
                             placeholder="Ex: Wagner Jorcuvich Nunes da Silva" required>
                     </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Disciplina -->
-                        <label for="disciplina">Disciplina</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="text" id="disciplina" name="disciplina" placeholder="Ex: Back-End" required>
+                    <div class="coluninha">
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Disciplina -->
+                            <label for="disciplina">Disciplina</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="text" id="disciplina" name="disciplina" placeholder="Ex: Back-End" required>
+                        </div>
+
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Série/Turma -->
+                            <label for="turma">Série/Turma</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="text" id="turma" name="turma" placeholder="Ex: 3D" required>
+                        </div>
                     </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Série/Turma -->
-                        <label for="turma">Série/Turma</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="text" id="turma" name="turma" placeholder="Ex: 3D" required>
+                    <div class="coluninha">
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Data da Ocorrência -->
+                            <label for="data-ocorrencia">Data da Ocorrência</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="date" id="data-ocorrencia" name="data-ocorrencia" required>
+                        </div>
+
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Horário da Ocorrência -->
+                            <label for="horario-ocorrencia">Horário da Ocorrência</label>
+                            <!-- Onde os dados serão inseridos -->
+                            <input type="time" id="horario-ocorrencia" name="horario-ocorrencia" required>
+                        </div> 
                     </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Data da Ocorrência -->
-                        <label for="data-ocorrencia">Data da Ocorrência</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="date" id="data-ocorrencia" name="data-ocorrencia" required>
-                    </div>
+                    <div class="coluninha">
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Ocorrências Pedagógicas -->
+                            <label for="ocorrencia-pedagogica">Ocorrência Pedagógica</label>
+                            <!-- Opções -->
+                            <select name="ocorrencia-pedagogica" id="ocorrencia-pedagogica" required>
+                                <option value="nao-realiza-tarefa">Não realiza as tarefas</option>
+                                <option value="nao-traz-material">Não traz material necessário para as aulas</option>
+                                <option value="falta-em-avaliacoes">Falta em avaliações</option>
+                                <option value="nao-entrega-trabalho">Não entrega trabalhos escolares</option>
+                                <option value="desinteresse-nas-aulas">Desinteresse a apatia durante as aulas</option>
+                            </select>
+                        </div>
 
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Horário da Ocorrência -->
-                        <label for="horario-ocorrencia">Horário da Ocorrência</label>
-                        <!-- Onde os dados serão inseridos -->
-                        <input type="time" id="horario-ocorrencia" name="horario-ocorrencia" required>
+                        <!-- Divisão -->
+                        <div class="input-group">
+                            <!-- Ocorrências Pedagógicas -->
+                            <label for="ocorrencia-pedagogica">Ocorrência Monitores</label>
+                            <!-- Opções -->
+                            <select name="ocorrencia-monitores" id="ocorrencia-monitores" required>
+                                <option value="dano-ao-patrimonio">Dano ao patrimônio</option>
+                                <option value="desrespeito-ao-professor">Desrespeito ao professor</option>
+                                <option value="briga-com-colegas">Briga com os colegas</option>
+                                <option value="conversa-excessiva">Conversa excessiva durante as aulas</option>
+                                <option value="dormir-na-sala">Permanecer na sala em estado de sonolência</option>
+                            </select>
+                        </div>
                     </div>
-
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Ocorrências Pedagógicas -->
-                        <label for="ocorrencia-pedagogica">Ocorrência Pedagógica</label>
-                        <!-- Opções -->
-                        <select name="ocorrencia-pedagogica" id="ocorrencia-pedagogica" required>
-                            <option value="nao-realiza-tarefa">Não realiza as tarefas</option>
-                            <option value="nao-traz-material">Não traz material necessário para as aulas</option>
-                            <option value="falta-em-avaliacoes">Falta em avaliações</option>
-                            <option value="nao-entrega-trabalho">Não entrega trabalhos escolares</option>
-                            <option value="desinteresse-nas-aulas">Desinteresse a apatia durante as aulas</option>
-                        </select>
-                    </div>
-
-                    <!-- Divisão -->
-                    <div class="input-group">
-                        <!-- Ocorrências Pedagógicas -->
-                        <label for="ocorrencia-pedagogica">Ocorrência Monitores</label>
-                        <!-- Opções -->
-                        <select name="ocorrencia-monitores" id="ocorrencia-monitores" required>
-                            <option value="conversa-excessiva">Conversa excessiva durante as aulas</option>
-                            <option value="desrespeito-ao-professor">Desrespeito ao professor</option>
-                            <option value="briga-com-colegas">Briga com os colegas</option>
-                            <option value="dano-ao-patrimonio">Dano ao patrimônio</option>
-                            <option value="dormir-na-sala">Permanecer na sala em estado de sonolência</option>
-                        </select>
-                    </div>
-
                     <!-- Divisão -->
                     <div class="input-group">
                         <!-- Descrição da Ocorrência -->
