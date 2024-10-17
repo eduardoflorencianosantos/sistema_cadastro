@@ -41,7 +41,7 @@ i {
     width: auto;
 }
 
-.modifica{
+.modifica {
     align-items: center;
     display: flex;
     justify-content: flex-start;
@@ -52,9 +52,8 @@ i {
 header h1 {
     flex: 1;
     color: #fff;
-    margin-left: 50px;
-    text-transform: uppercase;
-    font-size: 16px;
+    margin-left: 1rem;
+    font-size: 1.3rem;
 }
 
 /*Colocamos uma distancia do elemento em relasção ao topo junto com um espaçamento dos elementos e deixamos o elemento flexivel*/
@@ -178,6 +177,12 @@ select {
     background-color: #fff;
 }
 
+/*Coloquei uma distancia entre as colunas*/
+.coluninha {
+    display: flex;
+    column-gap: 20px;
+}
+
 /* Cor e modificação do botão de cadastrar */
 button {
     background-color: #007bff;
@@ -231,8 +236,8 @@ footer {
         height: calc(100vh - 100px);
     }
 
-    .header-principal ul li a{
-        text-decoration: underline;
+    .header-principal ul li a {
+        text-decoration: none;
     }
 
     /*Colocamos o elemnto como se fosse um bloco junto com uma largura definida e um texto alinhado no centro*/
@@ -254,9 +259,9 @@ footer {
 /* Responsividade para tablets e celulares */
 @media (max-width: 768px) {
 
-    .header-principal ul li a{
+    .header-principal ul li a {
         font-size: 75%;
-        text-decoration: underline;
+        text-decoration: none;
     }
 
     /* Área de navegação do cabeçalho */
@@ -310,7 +315,7 @@ footer {
         text-align: center;
     }
 
-    .header-principal ul li a{
+    .header-principal ul li a {
         font-size: 75%;
     }
 
@@ -324,9 +329,9 @@ footer {
         text-align: center;
     }
 
-    .header-principal ul li a{
+    .header-principal ul li a {
         font-size: 70%;
-        text-decoration: underline;
+        text-decoration: none;
     }
 
     /* Título do cabeçalho */
@@ -363,14 +368,9 @@ footer {
     button {
         font-size: 0.85rem;
     }
+
     /*Coloquei a quebra de linha*/
     .coluninha {
         flex-wrap: wrap;
     }
-}
-
-/*Coloquei uma distancia entre as colunas*/
-.coluninha {
-    display: flex;
-    column-gap: 20px;
 }

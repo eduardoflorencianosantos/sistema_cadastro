@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Ocorrência | C.C.M Tarquínio Santos</title>
+    <title>Cadastro Frequência | C.C.M Tarquínio Santos</title>
     <!-- CSS sendo chamado -->
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -27,20 +27,22 @@
                 <a href="index.html"><img src="imagem/logo.png" alt="Logo do C.C.M" class="logo" title="Voltar"></a>
             </figure>
             <!-- Título -->
-            <h1>Cadastro da Frequencia</h1>
+            <h1>Cadastro de Frequência</h1>
         </nav>
         <!--Aqui começa a lista do header-->
         <ul>
-            <!--Aqui são os links das outras paginas-->
-            <li> <a href="formulario_funcionario.html" target="_blank">Cadastro de Funcionário</a></li>
-            <!--Aqui são os links das outras paginas-->
-            <li><a href="formulario_responsavel.html" target="_blank">Cadastro de Responsável</a></li>
             <!--Aqui são os links das outras paginas-->
             <li><a href="formulario_aluno.html" target="_blank">Cadastro de Aluno</a></li>
             <!--Aqui são os links das outras paginas-->
             <li><a href="formulario_disciplina.html" target="_blank">Cadastro de Disciplina</a></li>
             <!--Aqui são os links das outras paginas-->
             <li><a href="formulario_encaminhamento.html" target="_blank">Cadastro de Encaminhamento</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li> <a href="formulario_funcionario.html" target="_blank">Cadastro de Funcionário</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="formulario_responsavel.html" target="_blank">Cadastro de Responsável</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li> <a href="formulario_ocorrencia.html" target="_blank">Cadastro de Ocorrência</a></li>
         </ul>
         <!--Aqui termina a lista do header-->
 
@@ -61,7 +63,7 @@
         <section class="form-section">
             <div class="form-container">
                 <!-- Subtítulo -->
-                <h2>Cadastro de Frequencia</h2>
+                <h2>Cadastro de Frequência</h2>
                 <!-- Início do formulário -->
                 <form action="#" method="POST" class="form">
                     <!-- Divisão -->
@@ -77,22 +79,23 @@
 
                         <!-- Divisão -->
                         <div class="input-group">
-                            <!-- Disciplina -->
-                            <label for="responsavel-cad-falta">Nome cadstranteesde</label>
+                            <!-- Responsável pela busca -->
+                            <label for="responsavel-busca">Responsável pela busca</label>
                             <!-- Onde os dados serão inseridos -->
-                            <input type="text" id="responsavel-cad-falta" name="responsavel-cad-falta" placeholder="Ex: Eduardo Florenciano NEymar" required>
+                            <input type="text" id="responsavel-busca" name="responsavel-busca"
+                                placeholder="Ex: Débora Gonçalves de Araújo" required>
                         </div>
 
-                         <!-- Divisão -->
+                        <!-- Divisão -->
                         <div class="input-group">
-                            <!-- Ocorrências Pedagógicas -->
-                            <label for="ocorrencia-pedagogica">Meio de Contato</label>
+                            <!-- Meio de contato do responsável -->
+                            <label for="contato-responsavel">Meio de Contato Responsável</label>
                             <!-- Opções -->
-                            <select name="contato" id="ocorrencia-pedagogica" required>
-                                <option value="nao-realiza-tarefa">Telefone Fixo</option>
-                                <option value="nao-traz-material">Celular</option>
+                            <select name="contato-responsavel" id="contato-responsavel" required>
+                                <option value="telefone-fixo">Telefone Fixo</option>
+                                <option value="celular">Celular</option>
                             </select>
-                         </div>     
+                        </div>
                     </div>
                     <!-- Divisão -->
                     <div class="input-group">
@@ -104,38 +107,39 @@
 
                     <!-- Divisão -->
                     <div class="input-group">
-                        <!-- Data da Ocorrência -->
-                        <label for="data-ocorrencia">Data da Falta</label>
+                        <!-- Data da busca ativa -->
+                        <label for="busca-ativa">Data da Busca Ativa</label>
                         <!-- Onde os dados serão inseridos -->
-                        <input type="date" id="data-falta" name="data-falta" required>
+                        <input type="date" id="busca-ativa" name="busca-ativa" required>
                     </div>
 
                     <!-- Divisão -->
                     <div class="input-group">
-                        <!-- Ocorrências Pedagógicas -->
-                        <label for="ocorrencia-pedagogica">Meio de Contato</label>
+                        <!-- Meio de contato ou visita domiciliar -->
+                        <label for="meio-contato">Meio de contato e/ou visita domiciliar</label>
                         <!-- Opções -->
-                        <select name="contato" id="ocorrencia-pedagogica" required>
-                            <option value="nao-realiza-tarefa">Telefone Fixo</option>
-                            <option value="nao-traz-material">Celular</option>
-                            <option value="falta-em-avaliacoes">Visita Domiciliar</option>
+                        <select name="meio-contato" id="meio-contato" required>
+                            <option value="telefone-fixo">Telefone Fixo</option>
+                            <option value="celular">Celular</option>
+                            <option value="visita-domiciliar">Visita Domiciliar</option>
                         </select>
-                    </div>        
+                    </div>
 
                     <!-- Divisão -->
                     <div class="input-group">
-                        <!-- Descrição da Ocorrência -->
-                        <label for="descricao-ocorrencia">Resultado do Contato</label>
+                        <!-- Resultado do contato -->
+                        <label for="resultado-contato">Resultado do contato e/ou encaminhamentos realizados</label>
                         <!-- Onde os dados serão inseridos -->
                         <textarea name="resultado-contato" id="resultado-contato" rows="10" cols="46"
-                            placeholder="Ex: Viajou 2 semanas e não justificou a escola com antecedencia." required></textarea>
+                            placeholder="Ex: Viajou 2 semanas e não avisou a escola com antecedência."
+                            required></textarea>
                     </div>
 
                     <!-- Quebra linha -->
                     <br>
 
                     <!-- Botão de cadastrar -->
-                    <button type="submit" onclick="ocorrencia()">Cadastrar</button>
+                    <button type="submit" onclick="frequencia()">Cadastrar</button>
                 </form>
             </div>
         </section>
@@ -144,11 +148,11 @@
     <!-- Rodapé -->
     <footer>
         <!-- Direitos autorais -->
-        <p>&copy; 2024 Formulário de Cadastro de Ocorrência | Todos os direitos reservados</p>
+        <p>&copy; 2024 Formulário de Cadastro de Frequência | Todos os direitos reservados</p>
     </footer>
 
     <!-- JavaScript sendo chamado -->
-    <script src="ocorrencia.js"></script>
+    <script src="frequencia.js"></script>
 </body>
 
 </html>
