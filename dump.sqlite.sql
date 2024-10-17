@@ -10,7 +10,9 @@ CREATE TABLE aluno(
   cpf INTEGER,
   --Aqui e o telefone do aluno do tipo INTEGER
   telefone INTEGER,
+  --Aqui e a serie do aluno do tipo VARCHAR
   serie VARCHAR(20),
+  --Aqui e o nome do responsavel do tipo VARCHAR
   nome_responsavel VARCHAR(150),
   --Aqui e o telefone do responasevel do aluno do tipo INTEGER
   telefone_responsavel INTEGER,
@@ -130,9 +132,27 @@ CREATE TABLE responsavel(
   FOREIGN key ('id_aluno') REFERENCES aluno ('id')
 );
  
--- INDEX
- 
--- TRIGGER
- 
--- VIEW
- 
+-- CRiamos a tabela de frequencia 
+CREATE table frequencia(
+  --Colocamos uma chave primaria em um id que e auto incrementado
+  id INTEGER PRIMARY key AUTOINCREMENT,
+  -- Aqui é o nome do aluno do tipo TEXT e ele não pode ser vazio
+  nome_aluno TEXT NOT NULL,
+  -- Aqui é o nome do funcionario que relatou a falta do aluno do tipo TEXT
+  nome_funcionario TEXT,
+  -- Aqui é o meio de contato do tipo VARCHAR e ele não pode ser vazio
+  meio_contato VARCHAR(50) NOT NULL,
+  --Aqui e a turma do aluno do tipo VARCHAR
+  turma VARCHAR(20),
+  --Aqui é a data da falta do tipo DATE e ele não pode ser vazio
+  data_falta DATE NOT NULL,
+  --Aqui é a data da busca do tipo DATE
+  data_busca DATE,
+  --Aqui é o resultado do contato do tipo TEXT
+  resultado_contato TEXT,
+  --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
+  FOREIGN key ('nome_aluno') REFERENCES aluno('nome'),
+  --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
+  FOREIGN key ('nome_funcionario') REFERENCES funcionario('nome'),
+  --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
+  FOREIGN key ('turma') REFERENCES aluno('serie')

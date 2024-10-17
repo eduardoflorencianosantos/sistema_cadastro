@@ -7,4 +7,5 @@ function frequencia() {
     let busca_ativa = document.getElementById('busca-ativa').value;
     let meio_contato = document.getElementById('meio-contato').value;
     let resultado_contato = document.getElementById('resultado-contato').value;
+    let dataFalta = document.getElementById('data-falta').value;
 }
