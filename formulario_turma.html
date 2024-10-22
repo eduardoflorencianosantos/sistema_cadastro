@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Funcionário | C.C.M Tarquínio Santos</title>
+    <title>Cadastro Turma | C.C.M Tarquínio Santos</title>
     <!-- CSS sendo chamado -->
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -27,7 +27,7 @@
                 <a href="index.html"><img src="imagem/logo.png" alt="Logo do C.C.M" class="logo" title="Voltar"></a>
             </figure>
             <!-- Título -->
-            <h1>Cadastro de Funcionário</h1>
+            <h1>Cadastro de Turma</h1>
         </nav>
         <!--Aqui começa a lista do header-->
         <ul>
@@ -36,13 +36,13 @@
             <!--Aqui são os links das outras paginas-->
             <li><a href="formulario_disciplina.html" target="_blank">Cadastro de Disciplina</a></li>
             <!--Aqui são os links das outras paginas-->
-            <li> <a href="formulario_frequencia.html" target="_blank">Cadastro de Frequência</a></li>
-            <!--Aqui são os links das outras paginas-->
             <li><a href="formulario_encaminhamento.html" target="_blank">Cadastro de Encaminhamento</a></li>
             <!--Aqui são os links das outras paginas-->
-            <li><a href="formulario_ocorrencia.html" target="_blank">Cadastro de Ocorrência</a></li>
+            <li> <a href="formulario_frequencia.html" target="_blank">Cadastro de Frequência</a></li>
             <!--Aqui são os links das outras paginas-->
-            <li><a href="formulario_turma.html" target="_blank">Cadastro de Turma</a></li>
+            <li> <a href="formulario_funcionario.html" target="_blank">Cadastro de Funcionário</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="formulario_ocorrencia.html" target="_blank">Cadastro de Ocorrência</a></li>
         </ul>
         <!--Aqui termina a lista do header-->
 
@@ -57,72 +57,48 @@
     </header> <br> <br> <br>
     <!--Fim do Header-->
 
-
     <!-- Parte principal -->
     <main>
         <!-- Seção do formulário -->
         <section class="form-section">
             <div class="form-container">
                 <!-- Subtítulo -->
-                <h2>Cadastro de Funcionário</h2>
+                <h2>Cadastro de Turma</h2>
                 <!-- Início do formulário -->
                 <form action="#" method="POST" class="form">
                     <!-- Divisão -->
                     <div class="input-group">
-                        <!-- Nome Completo do Funcionário -->
-                        <label for="nome-funcionario">Nome Completo Funcionário</label>
+                        <!-- Série/Turma -->
+                        <label for="turma">Série/Turma</label>
                         <!-- Onde os dados serão inseridos -->
-                        <input type="text" id="nome-funcionario" name="nome-funcionario"
-                            placeholder="Ex: Wagner Jorcuvich Nunes da Silva" required>
+                        <input type="text" id="turma" name="turma" placeholder="Ex: 3D" required>
                     </div>
 
-                    <div class="coluninha">
-                        <!-- Divisão -->
-                        <div class="input-group">
-                            <!-- CPF do funcionário -->
-                            <label for="cpf">CPF</label>
-                            <!-- Onde os dados serão inseridos -->
-                            <input type="text" id="cpf" name="cpf" placeholder="Ex: 14487998653" required>
-                        </div>
-
-                        <!-- Divisão -->
-                        <div class="input-group">
-                            <!-- Telefone do funcionário -->
-                            <label for="telefone">Telefone</label>
-                            <!-- Onde os dados serão inseridos -->
-                            <input type="tel" id="telefone" name="telefone" placeholder="Ex: 45999986023" required>
-                        </div>
-                    </div>
-                    <div class="coluninha">
-                        <!-- Divisão -->
-                        <div class="input-group">
-                            <!-- Setor do funcionário -->
-                            <label for="setor">Setor</label>
-                            <!-- Onde os dados serão inseridos -->
-                            <input type="text" id="setor" name="setor" placeholder="Ex: Educação" required>
-                        </div>
-
-                        <!-- Divisão -->
-                        <div class="input-group">
-                            <!-- Cargo do funcionário -->
-                            <label for="cargo">Cargo</label>
-                            <!-- Onde os dados serão inseridos -->
-                            <input type="text" id="cargo" name="cargo" placeholder="Ex: Professor" required>
-                        </div>
-                    </div>
                     <!-- Divisão -->
                     <div class="input-group">
-                        <!-- Que dia o funcionário foi contratado -->
-                        <label for="admissao">Data de Admissão</label>
+                        <!-- Ano Letivo -->
+                        <label for="ano-letivo">Ano Letivo</label>
                         <!-- Onde os dados serão inseridos -->
-                        <input type="date" id="admissao" name="admissao" required>
+                        <input type="number" id="ano-letivo" name="ano-letivo" placeholder="Ex: 2024" required>
+                    </div>
+
+                    <!-- Divisão -->
+                    <div class="input-group">
+                        <!-- Curso -->
+                        <label for="curso">Curso</label>
+                        <!-- Opções -->
+                        <select name="curso" id="curso" required>
+                            <option value="novo-ensino-medio">NEM</option>
+                            <option value="desenvolvimento-de-sistemas">DS</option>
+                            <option value="administracao">ADM</option>
+                        </select>
                     </div>
 
                     <!-- Quebra linha -->
                     <br>
 
                     <!-- Botão de cadastrar -->
-                    <button type="submit" onclick="funcionario()">Cadastrar</button>
+                    <button type="submit" onclick="turma()">Cadastrar</button>
                 </form>
             </div>
         </section>
@@ -131,11 +107,11 @@
     <!-- Rodapé -->
     <footer>
         <!-- Direitos autorais -->
-        <p>&copy; 2024 Formulário de Cadastro de Funcionário | Todos os direitos reservados</p>
+        <p>&copy; 2024 Formulário de Cadastro de Turma | Todos os direitos reservados</p>
     </footer>
 
     <!-- JavaScript sendo chamado -->
-    <script src="funcionario.js"></script>
+    <script src="turma.js"></script>
 </body>
 
 </html>
