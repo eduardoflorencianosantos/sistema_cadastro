@@ -11,7 +11,8 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f2f5;
     color: #333;
-    padding: 20px;
+    position: relative;
+    height: 100vh;
 }
 
 header {
@@ -21,6 +22,18 @@ header {
     padding: 20px 0;
     margin-bottom: 20px;
     border-radius: 8px;
+}
+
+/* Modificação de tamanho da logo */
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+.modifica {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
 }
 
 h1 {
@@ -69,10 +82,6 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #4a69bd;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -93,6 +102,17 @@ table th {
 
 table tbody tr:hover {
     background-color: #f9f9f9;
+}
+
+/* Cor e tamanho dos textos do rodapé */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    padding: 20px;
+    bottom: 0%;
+    width: 100%;
 }
 
 /* Responsividade */

@@ -3,52 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta de Alunos e Notas</title>
-    <link rel="stylesheet" href="consulta.css">
+    <title>Consulta</title>
+    <link rel="stylesheet" href="cards.css">
 </head>
 <body>
     <!-- Cabeçalho -->
     <header>
         <!-- Título -->
-        <h1>Área de Consulta</h1>
-    </header> <br> <br> <br> <br> <br>
+        <h1>Área de Consultas</h1>
+    </header>
 
+    <!-- Parte principal -->
     <main>
-        <form id="formConsulta">
-            <div class="form-group">
-                <label for="nome">Nome do Aluno:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite o nome do aluno">
-            </div>
-            
-            <div class="form-group">
-                <label for="cgm">CGM do Aluno:</label>
-                <input type="text" id="cgm" name="cgm" placeholder="Digite o CGM do aluno">
+        <!-- Seção dos cards -->
+        <section class="card-container">
+            <!-- Divisão -->
+            <div class="card">
+                <div class="card-content">
+                    <!-- Formulário -->
+                    <h3>Consulta de Alunos</h3>
+                    <!-- Descrição do formulário -->
+                    <p class="descricao">Cadastro de alunos inclui dados pessoais, série, turma,
+                        e outras informações escolares essenciais.</p>
+                    <!-- Botão do formulário -->
+                    <button class="btn-vermais"><a href="consulta-aluno.html" target="_blank">Ver mais</a></button>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="turma">Turma:</label>
-                <input type="text" id="turma" name="turma" placeholder="Digite a turma">
+            <!-- Divisão -->
+            <div class="card">
+                <div class="card-content">
+                    <!-- Formulário -->
+                    <h3>Consulta de frequências</h3>
+                    <!-- Descrição do formulário -->
+                    <p class="descricao">
+                        Cadastro de turma que inclui a turma do colégio, ano letivo e os cursos técnicos ou escala de
+                        ensino normal.</p>
+                    <!-- Botão do formulário -->
+                    <button class="btn-vermais"><a href="frequencia.html" target="_blank">Ver
+                            mais</a></button>
+                </div>
             </div>
 
-            <button type="button" onclick="consultarAlunos()">Consultar</button>
-        </form>
+            <!-- Divisão -->
+            <div class="card">
+                <div class="card-content">
+                    <!-- Formulário -->
+                    <h3>Consulta de ocorrências e encaminhamentos</h3>
+                    <!-- Descrição do formulário -->
+                    <p class="descricao">
+                        Cadastro de funcionário inclui dados pessoais, setor, cargo, data de admissão e informações de
+                        contato essenciais.</p>
+                    <!-- Botão do formulário -->
+                    <button class="btn-vermais"><a href="encaminhamento-ocorrencia.html" target="_blank">Ver
+                            mais</a></button>
+                </div>
+            </div>
 
-        <table id="resultadoConsulta" border="1">
-            <thead>
-                <tr>
-                    <th>CGM</th>
-                    <th>Nome</th>
-                    <th>Turma</th>
-                    <th>Frequência</th>
-                    <th>Ocorrência</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Resultados serão inseridos aqui -->
-            </tbody>
-        </table>
+        </section>
     </main>
 
-    <script src="script.js"></script>
+    <!-- Rodapé -->
+    <footer>
+        <!-- Direitos autorais -->
+        <p>&copy; 2024 Área de Cadastro | Todos os direitos reservados</p>
+    </footer>
 </body>
 </html>
