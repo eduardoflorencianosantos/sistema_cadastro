@@ -25,6 +25,19 @@ header {
     text-align: center;
 }
 
+/* Modificação de tamanho da logo */
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+.modifica {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -4%;
+}
+
 /* Título do cabeçalho */
 h1 {
     margin: 0;

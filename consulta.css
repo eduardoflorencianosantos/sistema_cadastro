@@ -1,59 +1,71 @@
 /* Link da tipografia da página */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Reseta margens, espaçamentos e bordas de todos os elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos gerais do corpo da página */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
+    font-family: 'Arial', sans-serif; /* Define a fonte padrão */
+    background-color: #f0f2f5; /* Cor de fundo da página */
+    color: #333; /* Cor do texto */
     position: relative;
-    height: 100vh;
+    height: 100vh; /* Altura total da viewport */
 }
 
+/* Estilização do cabeçalho */
 header {
-    text-align: center;
-    background-color: #343a40;
-    color: white;
-    padding: 20px 0;
-    margin-bottom: 20px;
-    border-radius: 8px;
+    text-align: center; /* Centraliza o texto */
+    background-color: #343a40; /* Fundo escuro */
+    color: white; /* Cor do texto */
+    padding: 20px 0; /* Espaçamento interno */
+    height: auto; /* Altura do cabeçalho */
+    top: auto;
 }
 
 /* Modificação de tamanho da logo */
 .logo {
-    height: 70px;
-    width: auto;
+    height: 60px; /* Define a altura */
+    width: auto; /* Mantém proporção */
+    margin-top: -5%;
 }
 
+/* Alinhamento da logo e do nav */
 .modifica {
     align-items: center;
     display: flex;
     justify-content: flex-start;
+    margin-left: 1%;
+    width: 5%;
+    height: auto;
 }
 
+/* Estilização do título principal */
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem; /* Tamanho do texto */
+    margin-top: -2.5%;
 }
 
+/* Estilos do conteúdo principal */
 main {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza no meio */
+    background-color: white; /* Fundo branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
+/* Margem inferior para cada grupo do formulário */
 .form-group {
     margin-bottom: 20px;
 }
 
+/* Estilos de rótulo do formulário */
 label {
     display: block;
     margin-bottom: 8px;
@@ -61,8 +73,9 @@ label {
     font-weight: bold;
 }
 
+/* Estilo do campo de entrada de texto */
 input[type="text"] {
-    width: 100%;
+    width: 100%; /* Ocupa toda a largura */
     padding: 12px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -70,85 +83,226 @@ input[type="text"] {
     margin-bottom: 10px;
 }
 
+/* Estilo do botão de consulta */
 button {
-    width: 100%;
+    width: 100%; /* Ocupa toda a largura */
     padding: 12px;
-    background-color: #343a40;
+    background-color: #343a40; /* Fundo escuro */
     color: white;
     border: none;
     border-radius: 4px;
     font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    cursor: pointer; /* Muda o cursor ao passar */
+    transition: background-color 0.3s ease; /* Efeito ao passar */
 }
 
+/* Estilo da tabela de resultados */
 table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 100%; /* Largura total */
+    border-collapse: collapse; /* Remove espaçamento entre bordas */
     margin-top: 20px;
     overflow-x: auto;
+    text-align: center;
 }
 
+/* Estilos das células da tabela */
 table th, table td {
     padding: 12px;
     text-align: center;
     border: 1px solid #ddd;
 }
 
+/* Cabeçalho da tabela com fundo claro */
 table th {
     background-color: #f2f2f2;
     font-weight: bold;
 }
 
+/* Efeito de hover nas linhas da tabela */
 table tbody tr:hover {
     background-color: #f9f9f9;
 }
 
-/* Cor e tamanho dos textos do rodapé */
+/* Estilização do rodapé */
 footer {
-    background-color: #343a40;
-    color: #fff;
+    background-color: #343a40; /* Fundo escuro */
+    color: #fff; /* Texto branco */
     text-align: center;
-    position: absolute;
     padding: 20px;
     bottom: 0%;
-    width: 100%;
+    width: 100%; /* Largura total */
 }
 
-/* Responsividade */
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 1800px){
+    /* Estilização do título principal */
+h1 {
+    margin-top: -3%;
+}
+}
+
+@media (max-width: 1700px){
+    /* Estilização do título principal */
+h1 {
+    margin-top: -3%;
+}
+}
+
+@media (max-width: 1500px){
+    /* Estilização do título principal */
+h1 {
+    margin-top: -4%;
+}
+}
+
+@media (max-width: 1100px){
+    /* Estilização do título principal */
+h1 {
+    margin-top: -6%;
+}
+}
+
+@media (max-width: 1300px){
+    /* Estilização do título principal */
+h1 {
+    margin-top: -5%;
+}
+}
+
+@media (max-width: 900px){
+    /* Estilização do título principal */
+h1 {
+    margin-top: -6%;
+}
+}
+
+/* Estilos responsivos para telas menores */
 @media (max-width: 768px) {
+    /* Reduz o tamanho do título */
     h1 {
         font-size: 2rem;
+        margin-top: -8%;
     }
 
+    /* Reduz o tamanho do texto do botão */
     button {
         font-size: 14px;
     }
 
+    /* Reduz o tamanho do texto nos campos de entrada */
     input[type="text"] {
         font-size: 14px;
     }
-
 }
 
-@media screen and (max-width: 520px) {
+@media (max-width: 600px){
+    /* Estilização do título principal */
+h1 {
+    font-size: 25px;
+    margin-top: -8%;
+}
+}
 
-    table{
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* Estilos específicos para telas muito pequenas */
+@media screen and (max-width: 520px) {
+    table {
         grid-template-columns: 1fr;
     }
 
+    h1{
+        margin-top: -10%;
+        margin-left: 15%;
+    }
 }
 
 @media (max-width: 480px) {
+
+    /* Reduz ainda mais o tamanho do título */
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        margin-top: -10%;
+        margin-left: 8%;
     }
 
+    /* Reduz o tamanho do texto do botão */
     button {
         font-size: 13px;
     }
 
+    /* Reduz o tamanho do texto nos campos de entrada */
     input[type="text"] {
         font-size: 13px;
     }
 }
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.tabelas-responsivas {
+    overflow-x: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#resultadoConsulta {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#resultadoConsulta th,
+#resultadoConsulta td {
+    padding: 8px;
+    text-align: left;
+    font-size: 1em;
+}
+
+/* Modo de colunas empilhadas para telas menores */
+@media (max-width: 768px) {
+    #resultadoConsulta,
+    #resultadoConsulta thead,
+    #resultadoConsulta tbody,
+    #resultadoConsulta th,
+    #resultadoConsulta td,
+    #resultadoConsulta tr {
+        display: block;
+        width: 100%;
+    }
+
+    #resultadoConsulta tr {
+        margin-bottom: 15px;
+    }
+
+    #resultadoConsulta th {
+        display: none; /* Esconde o cabeçalho das colunas */
+    }
+
+    #resultadoConsulta td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #resultadoConsulta td::before {
+        content: attr(data-label); /* Exibe o rótulo da coluna */
+        font-weight: bold;
+        width: 50%;
+    }
+}
+
+/* Definindo rótulos para cada coluna */
+#resultadoConsulta td:nth-of-type(1)::before { content: "CGM"; }
+#resultadoConsulta td:nth-of-type(2)::before { content: "Nome"; }
+#resultadoConsulta td:nth-of-type(3)::before { content: "Turma"; }
+#resultadoConsulta td:nth-of-type(4)::before { content: "Data de nascimento"; }
+#resultadoConsulta td:nth-of-type(5)::before { content: "Telefone responsável"; }
+#resultadoConsulta td:nth-of-type(6)::before { content: "Responsável Aluno"; }
+#resultadoConsulta td:nth-of-type(7)::before { content: "Telefone"; }

@@ -1,19 +1,17 @@
 <!-- Define o tipo de documento como HTML5 -->
 <!DOCTYPE html>
-<!-- Define o idioma do conteúdo como português brasileiro -->
-<html lang="pt-BR">
-
+<!-- Define o idioma do conteúdo como inglês -->
+<html lang="en">
 <head>
     <!-- Define o conjunto de caracteres como UTF-8 -->
     <meta charset="UTF-8">
     <!-- Configura a escala da viewport para dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Define o título da página exibido na aba do navegador -->
-    <title>Consulta de Alunos</title>
+    <title>Encaminhamento e ocorrencia</title>
     <!-- Linka o arquivo CSS para estilizar a página -->
     <link rel="stylesheet" href="consulta.css">
 </head>
-
 <body>
     <!-- Cabeçalho da página -->
     <header>
@@ -21,21 +19,20 @@
         <!-- Início da navegação -->
         <nav class="modifica">
             <!-- Container para logo e link -->
-            <figure class="teste">
+            <figure>
                 <!-- Logo do C.C.M com link para a página consulta.html -->
                 <a href="consulta.html"><img src="imagem/Saida.png" alt="Logo do C.C.M" class="logo" title="Voltar"></a>
             </figure>
         </nav>
 
-        <!-- Título da área de consulta de alunos -->
-        <h1 class="teste">Área de Consulta do aluno</h1>
-
-    </header>
+        <!-- Título da página -->
+        <h1>Encaminhamentos e ocorrencias</h1>
+    </header> 
 
     <!-- Quebra de linha para espaçamento -->
     <br> <br> <br> <br> <br>
 
-    <!-- Conteúdo principal da página -->
+    <!-- Conteúdo principal -->
     <main>
         <!-- Início do formulário de consulta com o ID "formConsulta" -->
         <form id="formConsulta">
@@ -46,7 +43,7 @@
                 <!-- Campo de entrada para o nome do aluno -->
                 <input type="text" id="nome" name="nome" placeholder="Digite o nome do aluno">
             </div>
-
+            
             <!-- Grupo de formulário para o CGM do aluno -->
             <div class="form-group">
                 <!-- Rótulo para o campo CGM do aluno -->
@@ -67,40 +64,28 @@
             <button type="button" onclick="consultarAlunos()">Consultar</button>
         </form>
 
-        <div class="tabelas-responsivas">
-            <!-- Tabela para exibir os resultados da consulta com borda -->
-            <table id="resultadoConsulta" border="1">
-                <thead>
-                    <!-- Linha de cabeçalho da tabela -->
-                    <tr>
-                        <th>CGM</th> <!-- Coluna do CGM do aluno -->
-                        <th>Nome</th> <!-- Coluna do nome do aluno -->
-                        <th>Turma</th> <!-- Coluna da turma do aluno -->
-                        <th>Data de nascimento</th> <!-- Coluna da data de nascimento do aluno -->
-                        <th>Telefone responsável</th> <!-- Coluna do telefone do responsável -->
-                        <th>Responsável Aluno</th> <!-- Coluna do nome do responsável pelo aluno -->
-                        <th>Telefone</th> <!-- Coluna do telefone do responsável -->
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Resultados da consulta serão inseridos aqui dinamicamente via JavaScript -->
-                    <tr>
-                        <td data-label="CGM">123456</td>
-                        <td data-label="Nome">João Silva</td>
-                        <td data-label="Turma">1A</td>
-                        <td data-label="Data de nascimento">01/01/2000</td>
-                        <td data-label="Telefone responsável">(11) 1234-5678</td>
-                        <td data-label="Responsável Aluno">Maria Silva</td>
-                        <td data-label="Telefone">(11) 9876-5432</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-    </main>
+        <!-- Tabela para exibir os resultados da consulta com borda -->
+        <table id="resultadoConsulta" border="1">
+            <thead>
+                <!-- Linha de cabeçalho da tabela -->
+                <tr>
+                    <th>CGM</th> <!-- Coluna do CGM do aluno -->
+                    <th>Nome</th> <!-- Coluna do nome do aluno -->
+                    <th>Turma</th> <!-- Coluna da turma do aluno -->
+                    <th>Data de nascimento</th> <!-- Coluna da data de nascimento do aluno -->
+                    <th>Telefone responsável</th> <!-- Coluna do telefone do responsável -->
+                    <th>Responsável Aluno</th> <!-- Coluna do nome do responsável pelo aluno -->
+                    <th>Telefone</th> <!-- Coluna do telefone do responsável -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Resultados da consulta serão inseridos aqui dinamicamente via JavaScript -->
+            </tbody>
+        </table>
+    </main> 
 
     <!-- Quebra de linha para espaçamento -->
-    <br> <br> <br> <br>
+    <br> <br> <br> <br> 
 
     <!-- Rodapé da página -->
     <footer>
@@ -109,7 +94,6 @@
     </footer>
 
     <!-- Importa o arquivo JavaScript para funcionalidade da página -->
-    <script src="consulta-aluno.js"></script>
+    <script src="encaminhamento-ocorrencia.js"></script>
 </body>
-
 </html>
