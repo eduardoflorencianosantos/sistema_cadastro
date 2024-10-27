@@ -12,24 +12,46 @@
     <title>frequencia</title>
     <!-- Linka o arquivo CSS para estilizar a página -->
     <link rel="stylesheet" href="consulta.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <!--Identifica os icons atráves de codigo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <!-- Cabeçalho da página -->
-    <header>
-
-        <!-- Início da navegação -->
+    <!--Aqui começa o header-->
+    <header style=" position: fixed; width: 100%;" class="header-principal">
+        <!--Aqui tem um input para colocar o menu-->
+        <input type="checkbox" name="" id="chk1">
+        <!-- Área de navegação do cabeçalho -->
         <nav class="modifica">
-            <!-- Container para logo e link -->
             <figure>
-                <!-- Logo do C.C.M com link para a página consulta.html -->
-                <a href="consulta.html"><img src="imagem/Saida.png" alt="Logo do C.C.M" class="logo" title="Voltar"></a>
+                <!-- Logo do C.C.M -->
+                <a href="consulta.html"><img src="imagem/Sair-removebg-preview.png" alt="Logo do C.C.M" class="logo" title="Voltar"></a>
             </figure>
+            <!-- Título -->
+            <h1>Consulta de Frequência</h1>
         </nav>
+        <!--Aqui começa a lista do header-->
+        <ul>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="consulta-aluno.html" target="_blank">Consulta de Aluno</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="consulta-encaminhamento-ocorrencia.html" target="_blank">Consulta de Encaminhamento e Ocorrência</a></li>
+        </ul>
+        <!--Aqui termina a lista do header-->
 
-        <!-- Título da área de consulta de frequência -->
-        <h1 class="Titulo-da-pagina">Área de Consulta de frequencia</h1>
-    </header>
+        <!--Aqui vai ter o icone do menu-->
+        <div class="menu">
+            <!--Aqui está o icone do menu-->
+            <label for="chk1">
+                <!--Esse e o icone do menuzinho-->
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+    </header> <br> <br> <br>
 
     <!-- Quebra de linha para espaçamento -->
     <br> <br> <br>

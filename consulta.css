@@ -17,38 +17,111 @@ body {
     height: 100vh; /* Altura total da viewport */
 }
 
-/* Estilização do cabeçalho */
-header {
-    text-align: center; /* Centraliza o texto */
-    background-color: #343a40; /* Fundo escuro */
-    color: white; /* Cor do texto */
-    padding: 20px 0; /* Espaçamento interno */
-    height: auto; /* Altura do cabeçalho */
-    top: auto;
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Aqui começa o Header*/
+
+/*Colocamos o grid no header da pagina principal junto com uma cor de fundo, tambem adicionamos uma altura parea o header e colocamos os elementos separados*/
+.header-principal {
+    grid-area: cabe;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background-color: #343a40;
+}
+
+/*Colocamos isso para o elemento não aparecer no site */
+#chk1 {
+    display: none;
+}
+
+/*Colocamos uma cor nos icones e um cursor pointer para quando ficar em cima aparecer uma mão para clicar*/
+i {
+    color: #fff;
+    cursor: pointer;
 }
 
 /* Modificação de tamanho da logo */
 .logo {
-    height: 60px; /* Define a altura */
-    width: auto; /* Mantém proporção */
-    margin-top: -5%;
+    height: 50px;
+    width: auto;
 }
 
-/* Alinhamento da logo e do nav */
 .modifica {
     align-items: center;
     display: flex;
     justify-content: flex-start;
-    margin-left: 1%;
-    width: 5%;
-    height: auto;
+    padding: 10px 20px;
 }
 
-/* Estilização do título principal */
-h1 {
-    font-size: 2.5rem; /* Tamanho do texto */
-    margin-top: -2.5%;
+/* Tamanho do título */
+header h1 {
+    flex: 1;
+    color: #fff;
+    margin-left: 2rem;
+    font-size: 1.3rem;
 }
+
+/*Colocamos uma distancia do elemento em relasção ao topo junto com um espaçamento dos elementos e deixamos o elemento flexivel*/
+.header-principal ul {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+
+/*Colocamos iso para nao aparecer a bolinha do Ul*/
+.header-principal ul li {
+    list-style: none;
+}
+
+/*Colocamos uma cor nas palavras junto com um tamanho de letra definida também tiramos o sublinafo que tem nos links com uma distancia da esquerda e direita e cima baixo */
+.header-principal ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding-block: 5px;
+    transition: all 1s ease;
+    padding: 10px 15px;
+}
+
+/*Colocamos uma cor nas palavras*/
+.header-principal ul li a:hover {
+    color: #fff;
+}
+
+/*Colocamos o elemento como se fosse um bloco junto com uma cor de fundo também arrendondamos as bordas junto com uma transição*/
+.header-principal ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    border-radius: 200px;
+    background: #fff;
+    transition: all 1s ease;
+}
+
+/*Colocamos uma largura no elemento*/
+.header-principal ul li a:hover::after {
+    width: 80%;
+}
+
+/*Colocamos um tamanho de letra definida junto com um display none que faz com que o elemento desapareça do site*/
+header .menu {
+    font-size: 2.5em;
+    display: none;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* Estilos do conteúdo principal */
 main {
@@ -137,73 +210,70 @@ footer {
 /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
-@media (max-width: 1800px){
-    /* Estilização do título principal */
-h1 {
-    margin-top: -3%;
-}
+/*Media scren (1330 pixels)*/
+@media only screen and (max-width: 1330px) {
+
+    /*Colocamos o elemento em uma posição fixa com uma distancia do topo, também adicionamos uma cor de fundo, adicionamo uma largura e altura para o elemento junto com uma transição*/
+    .header-principal ul {
+        position: fixed;
+        top: 102px;
+        margin-top: 0;
+        right: -100%;
+        background: rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+        width: 40%;
+        height: calc(100vh - 100px);
+    }
+
+    .header-principal ul li a {
+        text-decoration: none;
+        text-align: center;
+    }
+
+    /*Colocamos o elemnto como se fosse um bloco junto com uma largura definida e um texto alinhado no centro*/
+    header .menu {
+        display: block;
+        width: 100px;
+        text-align: center;
+        align-items: center;
+    }
+
+    /*Colocamos o elemento para ficar 0% para a direita*/
+    #chk1:checked~ul {
+        right: 0;
+        font-size: 20px;
+        text-align: center;
+        align-items: center;
+    }
 }
 
-@media (max-width: 1700px){
-    /* Estilização do título principal */
-h1 {
-    margin-top: -3%;
-}
-}
-
-@media (max-width: 1500px){
-    /* Estilização do título principal */
-h1 {
-    margin-top: -4%;
-}
-}
-
-@media (max-width: 1100px){
-    /* Estilização do título principal */
-h1 {
-    margin-top: -6%;
-}
-}
-
-@media (max-width: 1300px){
-    /* Estilização do título principal */
-h1 {
-    margin-top: -5%;
-}
-}
-
-@media (max-width: 900px){
-    /* Estilização do título principal */
-h1 {
-    margin-top: -6%;
-}
-}
-
-/* Estilos responsivos para telas menores */
+/* Responsividade para tablets e celulares */
 @media (max-width: 768px) {
-    /* Reduz o tamanho do título */
-    h1 {
-        font-size: 2rem;
-        margin-top: -8%;
+
+    .header-principal ul li a {
+        font-size: 75%;
+        text-decoration: none;
+        text-align: center;
     }
 
-    /* Reduz o tamanho do texto do botão */
-    button {
-        font-size: 14px;
+    /* Área de navegação do cabeçalho */
+    header nav {
+        flex-direction: column;
+        text-align: center;
     }
 
-    /* Reduz o tamanho do texto nos campos de entrada */
-    input[type="text"] {
-        font-size: 14px;
+    /* Título do cabeçalho */
+    header h1 {
+        margin-left: 0;
+        font-size: 1.25rem;
     }
-}
 
-@media (max-width: 600px){
-    /* Estilização do título principal */
-h1 {
-    font-size: 25px;
-    margin-top: -8%;
-}
+    /* Logo do C.C.M */
+    .logo {
+        height: 40px;
+    }
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -216,21 +286,9 @@ h1 {
     table {
         grid-template-columns: 1fr;
     }
-
-    h1{
-        margin-top: -10%;
-        margin-left: 15%;
-    }
 }
 
 @media (max-width: 480px) {
-
-    /* Reduz ainda mais o tamanho do título */
-    h1 {
-        font-size: 1.3rem;
-        margin-top: -10%;
-        margin-left: 8%;
-    }
 
     /* Reduz o tamanho do texto do botão */
     button {
