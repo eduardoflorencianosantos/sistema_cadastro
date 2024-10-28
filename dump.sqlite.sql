@@ -50,26 +50,28 @@ CREATE TABLE encaminhamento(
   nome_aluno TEXT NOT NULL,
   --Aqui é o nome do professor do tipo VARCHAR
   nome_professor VARCHAR(150),
-  --Aqui vai ser o nome da disciplina do tipo TEXT
-  disciplina TEXT,
   --Aqui vai ser a serie do aluno do tipo VARCHAR
   serie VARCHAR(30),
   --Aqui vai conter a data do encaminhamento
   data_encaminhamento DATE,
   --Aqui vai conter a hora do encaminhamento
   horario TEXT,
+  -- Aqui será outro tipo de ocorrência que não estão nas escolhas
+  outro TEXT,
+  -- Aqui é a quantidade de vezes que foi chamada a atenção do aluno
+  chamada INTEGER,
+  -- Aqui é a punição do aluno
+  punicao TEXT,
   --Aqui vai contar a ocorrencia do tipo VARCHAR
   pedagogico VARCHAR(200),
   --Aqui vai contar a ocorrencia do tipo VARCHAR
   monitor VARCHAR(200),
   --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
-  FOREIGN KEy ('nome_aluno') REFERENCES aluno('nome'),
+  FOREIGN KEY ('nome_aluno') REFERENCES aluno('nome'),
   --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
   FOREIGN KEY ('nome_professor') REFERENCES disciplina('nome_professor'),
   --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
-  FOREIGN key ('disciplina') REFERENCES disciplina('nome_disciplina'),
-  --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
-  FOREIGN key ('serie') REFERENCES aluno('serie')
+  FOREIGN KEY ('serie') REFERENCES aluno('serie')
 );
 
 --Aqui criamos a tabela funcionario
@@ -84,6 +86,8 @@ CREATE TABLE funcionario(
   telefone INTEGER,
   --Aqui é o setor do funcionario do tipo TEXT e ele não pode ser vazio
   setor TEXT NOT NULL,
+  -- Aqui é o cargo do funcionário do tipo TEXT e ele não pode ser vazio
+  cargo TEXT NOT NULL,
   --Aqui é a admissão do funcionario do tipo TEXT
   admissao TEXT
 );
@@ -107,13 +111,13 @@ CREATE TABLE ocorrencia(
   --Aqui é a descrição da ocorrencia do tipo TEXT
   descricao TEXT,
   --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
-  FOREIGN KEy ('nome_aluno')REFERENCES aluno('nome'),
+  FOREIGN KEY ('nome_aluno')REFERENCES aluno('nome'),
   --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
-  FOREIGN KEy ('nome_funcionario')REFERENCES funcionario('nome'),
+  FOREIGN KEY ('nome_funcionario')REFERENCES funcionario('nome'),
   --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
-  FOREIGN KEy ('disciplina')REFERENCES disciplina('nome'),
+  FOREIGN KEY ('disciplina')REFERENCES disciplina('nome'),
   --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
-  FOREIGN KEy ('serie')REFERENCES aluno('serie')
+  FOREIGN KEY ('serie')REFERENCES aluno('serie')
 );
 
 --Aqui criamos a tabela responsavel
@@ -129,10 +133,10 @@ CREATE TABLE responsavel(
   --Aqui é o cpf do responsavel do tipo INTEGER
   cpf INTEGER,
   --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
-  FOREIGN key ('id_aluno') REFERENCES aluno ('id')
+  FOREIGN KEY ('id_aluno') REFERENCES aluno ('id')
 );
  
--- CRiamos a tabela de frequencia 
+-- Criamos a tabela de frequencia 
 CREATE table frequencia(
   --Colocamos uma chave primaria em um id que e auto incrementado
   id INTEGER PRIMARY key AUTOINCREMENT,
@@ -148,11 +152,14 @@ CREATE table frequencia(
   data_falta DATE NOT NULL,
   --Aqui é a data da busca do tipo DATE
   data_busca DATE,
+  -- Aqui é o meio de contato ou visita domiciliar que o responsável irá fazer
+  contato_visita VARCHAR(50) NOT NULL,
   --Aqui é o resultado do contato do tipo TEXT
   resultado_contato TEXT,
   --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
-  FOREIGN key ('nome_aluno') REFERENCES aluno('nome'),
+  FOREIGN KEY ('nome_aluno') REFERENCES aluno('nome'),
   --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
-  FOREIGN key ('nome_funcionario') REFERENCES funcionario('nome'),
+  FOREIGN KEY ('nome_funcionario') REFERENCES funcionario('nome'),
   --Aqui estamos indicando que existe uma chave estrangeira e aonde ela esta localizada
-  FOREIGN key ('turma') REFERENCES aluno('serie')
+  FOREIGN KEY ('turma') REFERENCES aluno('serie')
+)
