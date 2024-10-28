@@ -119,10 +119,6 @@ header .menu {
     display: none;
 }
 
-/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
-
 /* Estilos do conteúdo principal */
 main {
     max-width: 900px; /* Largura máxima */
@@ -162,9 +158,9 @@ button {
     padding: 12px;
     background-color: #343a40; /* Fundo escuro */
     color: white;
-    border: none;
+    border: none;  color: white;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 16px;background-color: #343a40;
     cursor: pointer; /* Muda o cursor ao passar */
     transition: background-color 0.3s ease; /* Efeito ao passar */
 }
@@ -198,12 +194,15 @@ table tbody tr:hover {
 
 /* Estilização do rodapé */
 footer {
-    background-color: #343a40; /* Fundo escuro */
-    color: #fff; /* Texto branco */
+    background-color: #343a40;
+    color: white;
+    position: absolute;
+    bottom:0;
+    width:100%;
+    margin: auto auto;
+    padding: 10px 5px;
     text-align: center;
-    padding: 20px;
-    bottom: 0%;
-    width: 100%; /* Largura total */
+    height: auto;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -273,6 +272,14 @@ footer {
     /* Logo do C.C.M */
     .logo {
         height: 40px;
+    }
+
+    footer{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin: auto auto;
+        padding: 10px 5px;
     }
 }
 

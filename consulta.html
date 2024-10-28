@@ -4,21 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta</title>
-    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="cards-consultas.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <!-- Título -->
-        <h1>Área de Consultas</h1>
-
+    <!--Aqui começa o header-->
+    <header style=" position: fixed; width: 100%;" class="header-principal">
+        <!--Aqui tem um input para colocar o menu-->
+        <input type="checkbox" name="" id="chk1">
+        <!-- Área de navegação do cabeçalho -->
         <nav class="modifica">
             <figure>
                 <!-- Logo do C.C.M -->
                 <a href="index.html"><img src="imagem/logo.png" alt="Logo do C.C.M" class="logo" title="Voltar"></a>
             </figure>
+            <!-- Título -->
+            <h1>Consultas</h1>
         </nav>
-    </header>
+
+        <!--Aqui vai ter o icone do menu-->
+        <div class="menu">
+            <!--Aqui está o icone do menu-->
+            <label for="chk1">
+                <!--Esse e o icone do menuzinho-->
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+    </header> <br> <br> <br> 
 
     <!-- Parte principal -->
     <main>
@@ -33,7 +44,7 @@
                     <p class="descricao">Consulta de alunos inclui dados pessoais, série, turma,
                         e outras informações escolares essenciais.</p>
                     <!-- Botão do formulário -->
-                    <button class="btn-vermais"><a href="consulta-aluno.html" target="_blank">Ver mais</a></button>
+                    <button class="btn-vermais"><a href="consulta-aluno.html">Ver mais</a></button>
                 </div>
             </div>
 
@@ -47,7 +58,7 @@
                         Consulta frequência que examina a frequência do aluno, as faltas justificadas e não
                         justificadas.</p>
                     <!-- Botão do formulário -->
-                    <button class="btn-vermais"><a href="consulta-frequencia.html" target="_blank">Ver
+                    <button class="btn-vermais"><a href="consulta-frequencia.html">Ver
                             mais</a></button>
                 </div>
             </div>
@@ -61,7 +72,7 @@
                     <p class="descricao">
                         Consulta de ocorrência e encaminhamentos que documenta detalhes sobre incidentes, incluindo data, aluno envolvido e descrição</p>
                     <!-- Botão do formulário -->
-                    <button class="btn-vermais"><a href="consulta-encaminhamento-ocorrencia.html" target="_blank">Ver
+                    <button class="btn-vermais"><a href="consulta-encaminhamento-ocorrencia.html">Ver
                             mais</a></button>
                 </div>
             </div>

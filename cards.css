@@ -127,6 +127,88 @@ footer p {
     margin: 5px 0;
 }
 
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Media scren (1330 pixels)*/
+@media only screen and (max-width: 1330px) {
+
+    /*Colocamos o elemento em uma posição fixa com uma distancia do topo, também adicionamos uma cor de fundo, adicionamo uma largura e altura para o elemento junto com uma transição*/
+    .header-principal ul {
+        position: fixed;
+        top: 102px;
+        margin-top: 0;
+        right: -100%;
+        background: rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+        width: 40%;
+        height: calc(100vh - 100px);
+    }
+
+    .header-principal ul li a {
+        text-decoration: none;
+        text-align: center;
+    }
+
+    /*Colocamos o elemnto como se fosse um bloco junto com uma largura definida e um texto alinhado no centro*/
+    header .menu {
+        display: block;
+        width: 100px;
+        text-align: center;
+        align-items: center;
+    }
+
+    /*Colocamos o elemento para ficar 0% para a direita*/
+    #chk1:checked~ul {
+        right: 0;
+        font-size: 20px;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 768px) {
+
+    .header-principal ul li a {
+        font-size: 75%;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    /* Área de navegação do cabeçalho */
+    header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Título do cabeçalho */
+    header h1 {
+        margin-left: 0;
+        font-size: 1.25rem;
+    }
+
+    /* Logo do C.C.M */
+    .logo {
+        height: 40px;
+    }
+
+    footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin: auto auto;
+    padding: 10px 5px;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
 
