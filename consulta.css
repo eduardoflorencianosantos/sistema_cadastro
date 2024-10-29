@@ -6,11 +6,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Estilos gerais do corpo da página */
 body {
-    font-family: 'Arial', sans-serif; /* Define a fonte padrão */
     background-color: #f0f2f5; /* Cor de fundo da página */
     color: #333; /* Cor do texto */
     position: relative;
