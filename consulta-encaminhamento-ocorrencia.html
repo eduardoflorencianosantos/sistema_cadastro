@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <!-- Define o idioma do conteúdo como inglês -->
 <html lang="pt-BR">
+
 <head>
     <!-- Define o conjunto de caracteres como UTF-8 -->
     <meta charset="UTF-8">
@@ -18,6 +19,7 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <!--Aqui começa o header-->
     <header style=" position: fixed; width: 100%;" class="header-principal">
@@ -27,7 +29,8 @@
         <nav class="modifica">
             <figure>
                 <!-- Logo do C.C.M -->
-                <a href="consulta.html"><img src="imagem/Sair-removebg-preview.png" alt="Logo do C.C.M" class="logo" title="Voltar"></a>
+                <a href="consulta.html"><img src="imagem/Sair-removebg-preview.png" alt="Logo do C.C.M" class="logo"
+                        title="Voltar"></a>
             </figure>
             <!-- Título -->
             <h1>Consulta de Encaminhamento e Ocorrência</h1>
@@ -65,7 +68,7 @@
                 <!-- Campo de entrada para o nome do aluno -->
                 <input type="text" id="nome" name="nome" placeholder="Ex: Eduardo Florenciano dos Santos">
             </div>
-            
+
             <!-- Grupo de formulário para o CGM do aluno -->
             <div class="form-group">
                 <!-- Rótulo para o campo CGM do aluno -->
@@ -84,20 +87,49 @@
 
             <!-- Botão para acionar a função JavaScript "consultarAlunos" -->
             <button type="button" onclick="consultarAlunos()">Consultar</button>
-        </form>
+        </form> <br> 
 
         <!-- Tabela para exibir os resultados da consulta com borda -->
         <table id="resultadoConsulta" border="1">
+
+            <h2 class="Titulo-tabela">Ocorrência</h2>
+
             <thead>
                 <!-- Linha de cabeçalho da tabela -->
                 <tr>
-                    <th>CGM</th> <!-- Coluna do CGM do aluno -->
-                    <th>Nome</th> <!-- Coluna do nome do aluno -->
+                    <th>Nome Completo Aluno</th> <!-- Coluna do CGM do aluno -->
+                    <th>CGM</th> <!-- Coluna do nome do aluno -->
                     <th>Turma</th> <!-- Coluna da turma do aluno -->
-                    <th>Data de nascimento</th> <!-- Coluna da data de nascimento do aluno -->
-                    <th>Telefone responsável</th> <!-- Coluna do telefone do responsável -->
-                    <th>Responsável Aluno</th> <!-- Coluna do nome do responsável pelo aluno -->
-                    <th>Telefone</th> <!-- Coluna do telefone do responsável -->
+                    <th>Nome Completo Funcionário</th> <!-- Coluna da data de nascimento do aluno -->
+                    <th>Disciplina</th> <!-- Coluna do telefone do responsável -->
+                    <th>Data da Ocorrência </th> <!-- Coluna do nome do responsável pelo aluno -->
+                    <th>Horário da Ocorrência</th> <!-- Coluna do telefone do responsável -->
+                    <th>Descrição da Ocorrência</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Resultados da consulta serão inseridos aqui dinamicamente via JavaScript -->
+            </tbody>
+        </table> <br>
+
+        <!-- Tabela para exibir os resultados da consulta com borda -->
+        <table id="resultadoConsulta" border="1">
+
+            <h2 class="Titulo-tabela">Encaminhamento</h2>
+
+            <thead>
+                <!-- Linha de cabeçalho da tabela -->
+                <tr>
+                    <th>Nome Completo Aluno</th> <!-- Coluna do CGM do aluno -->
+                    <th>CGM</th> <!-- Coluna do nome do aluno -->
+                    <th>Turma</th> <!-- Coluna da turma do aluno -->
+                    <th>Nome do fncionário</th> <!-- Coluna da data de nascimento do aluno -->
+                    <th>Disciplina</th> <!-- Coluna do telefone do responsável -->
+                    <th>Data da Ocorrência </th> <!-- Coluna do nome do responsável pelo aluno -->
+                    <th>Horário da Ocorrência</th> <!-- Coluna do telefone do responsável -->
+                    <th>Ocorrência Pedagógica / Ocorrência Monitores</th>
+                    <th>Quantas vezes foi chamado antes do encaminhamento?</th>
+                    <th>Atividade que o aluno realizou fora da sala de aula.</th>
                 </tr>
             </thead>
             <tbody>
@@ -115,4 +147,5 @@
     <!-- Importa o arquivo JavaScript para funcionalidade da página -->
     <script src="encaminhamento-ocorrencia.js"></script>
 </body>
+
 </html>

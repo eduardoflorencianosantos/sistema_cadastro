@@ -121,12 +121,18 @@ header .menu {
 
 /* Estilos do conteúdo principal */
 main {
-    max-width: 900px; /* Largura máxima */
+    max-width: 1200px; /* Largura máxima */
     margin: 0 auto; /* Centraliza no meio */
     background-color: white; /* Fundo branco */
     padding: 20px; /* Espaçamento interno */
     border-radius: 8px; /* Borda arredondada */
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.Titulo-tabela{
+    text-align: center;
+    align-items: center;
+    text-decoration: underline;
 }
 
 /* Margem inferior para cada grupo do formulário */
@@ -200,7 +206,7 @@ table tbody tr:hover {
 footer {
     background-color: #343a40;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom:0;
     width:100%;
     margin: auto auto;
@@ -279,7 +285,7 @@ footer {
     }
 
     footer{
-        position: relative;
+        position: fixed;
         bottom: 0;
         width: 100%;
         margin: auto auto;
