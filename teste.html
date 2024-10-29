@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <!-- Define o conjunto de caracteres como UTF-8 -->
+        <meta charset="UTF-8">
+        <!-- Configura a escala da viewport para dispositivos móveis -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Define o título da página exibido na aba do navegador -->
+        <title>Consulta de Alunos</title>
+        <!-- Linka o arquivo CSS para estilizar a página -->
+        <link rel="stylesheet" href="teste.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+        <!--Identifica os icons atráves de codigo-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+</head>
+
+<body class="principal">
+        <!--Aqui começa o header-->
+        <header style=" position: fixed; width: 100%;" class="header-principal">
+            <!--Aqui tem um input para colocar o menu-->
+            <input type="checkbox" name="" id="chk1">
+            <!-- Área de navegação do cabeçalho -->
+            <nav class="modifica">
+                <figure>
+                    <!-- Logo do C.C.M -->
+                    <a href="consulta.html"><img src="imagem/Sair-removebg-preview.png" alt="Logo do C.C.M" class="logo" title="Voltar"></a>
+                </figure>
+                <!-- Título -->
+                <h1>Consulta de aluno</h1>
+            </nav>
+            <!--Aqui começa a lista do header-->
+            <ul>
+                <!--Aqui são os links das outras paginas-->
+                <li><a href="consulta-frequencia.html">Consulta de Frequência</a></li>
+                <!--Aqui são os links das outras paginas-->
+                <li><a href="consulta-encaminhamento-ocorrencia.html">Consulta de Encaminhamento e Ocorrência</a></li>
+            </ul>
+            <!--Aqui termina a lista do header-->
+    
+            <!--Aqui vai ter o icone do menu-->
+            <div class="menu">
+                <!--Aqui está o icone do menu-->
+                <label for="chk1">
+                    <!--Esse e o icone do menuzinho-->
+                    <i class="fa fa-bars"></i>
+                </label>
+            </div>
+        </header>
+
+        <!-- Conteúdo principal da página -->
+    <main class="corpo">
+        <!-- Início do formulário de consulta com o ID "formConsulta" -->
+        <form id="formConsulta">
+            <!-- Grupo de formulário para o nome do aluno -->
+            <div class="form-group">
+                <!-- Rótulo para o campo do nome do aluno -->
+                <label for="nome">Nome do Aluno:</label>
+                <!-- Campo de entrada para o nome do aluno -->
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome do aluno">
+            </div>
+
+            <!-- Grupo de formulário para o CGM do aluno -->
+            <div class="form-group">
+                <!-- Rótulo para o campo CGM do aluno -->
+                <label for="cgm">CGM do Aluno:</label>
+                <!-- Campo de entrada para o CGM do aluno -->
+                <input type="text" id="cgm" name="cgm" placeholder="Digite o CGM do aluno">
+            </div>
+
+            <!-- Grupo de formulário para a turma -->
+            <div class="form-group">
+                <!-- Rótulo para o campo da turma -->
+                <label for="turma">Turma:</label>
+                <!-- Campo de entrada para a turma -->
+                <input type="text" id="turma" name="turma" placeholder="Digite a turma">
+            </div>
+
+            <!-- Botão para acionar a função JavaScript "consultarAlunos" -->
+            <button type="button" onclick="consultarAlunos()">Consultar</button>
+        </form>
+
+        <div class="tabelas-responsivas">
+            <!-- Tabela para exibir os resultados da consulta com borda -->
+            <table id="resultadoConsulta" border="1">
+                <thead>
+                    <!-- Linha de cabeçalho da tabela -->
+                    <tr>
+                        <th>CGM</th> <!-- Coluna do CGM do aluno -->
+                        <th>Nome</th> <!-- Coluna do nome do aluno -->
+                        <th>Turma</th> <!-- Coluna da turma do aluno -->
+                        <th>Data de nascimento</th> <!-- Coluna da data de nascimento do aluno -->
+                        <th>Telefone responsável</th> <!-- Coluna do telefone do responsável -->
+                        <th>Responsável Aluno</th> <!-- Coluna do nome do responsável pelo aluno -->
+                        <th>Telefone</th> <!-- Coluna do telefone do responsável -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Resultados da consulta serão inseridos aqui dinamicamente via JavaScript -->
+                    <tr>
+                        <td data-label="CGM">123456</td>
+                        <td data-label="Nome">João Silva</td>
+                        <td data-label="Turma">1A</td>
+                        <td data-label="Data de nascimento">01/01/2000</td>
+                        <td data-label="Telefone responsável">(11) 1234-5678</td>
+                        <td data-label="Responsável Aluno">Maria Silva</td>
+                        <td data-label="Telefone">(11) 9876-5432</td>
+                    </tr>
+
+                    <!-- Resultados da consulta serão inseridos aqui dinamicamente via JavaScript -->
+                    <tr>
+                        <td data-label="CGM">123456</td>
+                        <td data-label="Nome">João Silva</td>
+                        <td data-label="Turma">1A</td>
+                        <td data-label="Data de nascimento">01/01/2000</td>
+                        <td data-label="Telefone responsável">(11) 1234-5678</td>
+                        <td data-label="Responsável Aluno">Maria Silva</td>
+                        <td data-label="Telefone">(11) 9876-5432</td>
+                    </tr>
+
+                    <!-- Resultados da consulta serão inseridos aqui dinamicamente via JavaScript -->
+                    <tr>
+                        <td data-label="CGM">123456</td>
+                        <td data-label="Nome">João Silva</td>
+                        <td data-label="Turma">1A</td>
+                        <td data-label="Data de nascimento">01/01/2000</td>
+                        <td data-label="Telefone responsável">(11) 1234-5678</td>
+                        <td data-label="Responsável Aluno">Maria Silva</td>
+                        <td data-label="Telefone">(11) 9876-5432</td>
+                    </tr>
+
+                    <!-- Resultados da consulta serão inseridos aqui dinamicamente via JavaScript -->
+                    <tr>
+                        <td data-label="CGM">123456</td>
+                        <td data-label="Nome">João Silva</td>
+                        <td data-label="Turma">1A</td>
+                        <td data-label="Data de nascimento">01/01/2000</td>
+                        <td data-label="Telefone responsável">(11) 1234-5678</td>
+                        <td data-label="Responsável Aluno">Maria Silva</td>
+                        <td data-label="Telefone">(11) 9876-5432</td>
+                    </tr>
+
+                    <!-- Resultados da consulta serão inseridos aqui dinamicamente via JavaScript -->
+                    <tr>
+                        <td data-label="CGM">123456</td>
+                        <td data-label="Nome">João Silva</td>
+                        <td data-label="Turma">1A</td>
+                        <td data-label="Data de nascimento">01/01/2000</td>
+                        <td data-label="Telefone responsável">(11) 1234-5678</td>
+                        <td data-label="Responsável Aluno">Maria Silva</td>
+                        <td data-label="Telefone">(11) 9876-5432</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer class="pe">
+        <!-- Texto de direitos autorais -->
+        <p>&copy; 2024 Formulário de Cadastro de Responsável | Todos os direitos reservados</p>
+    </footer>
+    
+</body>
+</html>
